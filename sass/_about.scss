@@ -6,7 +6,7 @@
     @include device('s') {
         display: flex;
         flex-direction: column-reverse;
-        gap: 2rem;
+        gap: 5rem;
     }
 
     .about-left {
@@ -89,7 +89,7 @@
             color: #fff;
             animation: fade-in linear forwards;
             animation-timeline: view();
-            animation-range: entry 200px;
+            animation-range: entry 30rem;
 
             mask: linear-gradient(to right, transparent 0%, black 50%, black 90%, transparent 100%);
 
