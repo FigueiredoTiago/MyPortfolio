@@ -578,10 +578,11 @@ header .header-content .intro {
 header .header-content .intro h1 {
   color: #fff;
   font-size: 4.8rem;
+  font-weight: bolder;
 }
 @media screen and (max-width: 760px) {
   header .header-content .intro h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
 header .header-content .intro p {
@@ -590,12 +591,12 @@ header .header-content .intro p {
   padding: 0rem 1rem;
   font-size: 2.8rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: bolder;
   background-image: linear-gradient(to bottom, #000, #000, transparent);
 }
 @media screen and (max-width: 760px) {
   header .header-content .intro p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 header .header-content .intro .dark-btn {
