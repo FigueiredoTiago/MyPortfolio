@@ -1,5 +1,13 @@
+@import './grid';
+
 .about-section {
     min-height: 100svh;
+
+    @include device('s') {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
 
     .about-left {
         height: 100svh;
@@ -11,9 +19,10 @@
 
         gap: 2rem;
 
-
-
-
+        @include device('s') {
+            height: 50svh;
+            
+        }
 
 
         .dark-btn {
@@ -32,7 +41,7 @@
             gap: 1rem;
 
             position: relative;
-            
+
 
             &::before {
                 content: "";
@@ -67,7 +76,9 @@
         justify-content: center;
         align-items: center;
 
-
+        @include device('s') {
+            height: 50svh;
+        }
 
         .profile-img {
             max-width: 40rem;
@@ -81,6 +92,10 @@
             animation-range: entry 200px;
 
             mask: linear-gradient(to right, transparent 0%, black 50%, black 90%, transparent 100%);
+
+            @include device('s') {
+                mask: linear-gradient(to right, transparent 0%, black 50%, black 50%, transparent 100%);
+            }
 
         }
 
