@@ -50,6 +50,7 @@ header {
 
 
             h1 {
+                color: #fff;
                 font-size: 4.8rem;
 
                 @include device('s') {
@@ -62,9 +63,10 @@ header {
                 width: auto;
                 padding: 0rem 1rem;
                 font-size: 2.8rem;
-                color: #0554F2;
+                color: #fff;
                 font-weight: 600;
-                background-image: linear-gradient(180deg, #0D0D0D, #0D0D0D, transparent);
+                background-image: linear-gradient( to bottom, #000, #000, transparent );
+                
 
                 @include device('s') {
                     font-size: 1.8rem;
