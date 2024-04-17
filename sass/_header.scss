@@ -39,28 +39,52 @@ header {
         .intro {
             display: grid;
             place-items: center;
-            gap: 2rem;
+            gap: 10rem;
 
-            max-width: 50rem;
             height: max-content;
+            width: max-content;
 
             animation: fade-out linear;
             animation-timeline: view();
             animation-range: exit -300px;
 
+            @include device('s') {
+                gap: 5rem;
+            }
+
 
             h1 {
                 color: #fff;
-
-
-
-
                 font-size: 4.8rem;
                 font-weight: bolder;
+                position: relative;
+                width: 100%;
+                
+
+                &::before {
+                    content: "Just a Developer";
+                    text-transform: uppercase;
+                    font-size: 6rem;
+                    color: #0d0d0db7;
+                    font-weight: bolder;
+                    position: absolute;
+                    bottom: -7rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    white-space: nowrap;
+
+                    @include device('s') {
+                        font-size: 3rem;
+                        bottom: -2.5rem;
+                    }
+                    
+                }
 
                 @include device('s') {
                     font-size: 3rem;
                 }
+
+
             }
 
             p {
@@ -123,7 +147,7 @@ header {
                     height: 1.2rem;
                     margin-left: 1rem;
                 }
-            }            
+            }
         }
 
         .social-medias-box {
