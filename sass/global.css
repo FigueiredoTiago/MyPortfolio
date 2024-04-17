@@ -636,19 +636,6 @@ header .header-content .intro .dark-btn img {
   height: 1.2rem;
   margin-left: 1rem;
 }
-header .header-content .intro .play-button {
-  cursor: pointer;
-}
-header .header-content .intro .play-button img {
-  width: 2.4rem;
-  height: 2.4rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s;
-}
-header .header-content .intro .play-button img:hover {
-  transform: scale(1.1);
-}
 header .header-content .social-medias-box {
   width: auto;
   position: absolute;

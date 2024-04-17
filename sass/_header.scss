@@ -123,22 +123,7 @@ header {
                     height: 1.2rem;
                     margin-left: 1rem;
                 }
-            }
-
-            .play-button {
-                cursor: pointer;
-                img {
-                    width: 2.4rem;
-                    height: 2.4rem;
-                    object-fit: cover;
-                    transition: transform 0.3s;
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-            
+            }            
         }
 
         .social-medias-box {
