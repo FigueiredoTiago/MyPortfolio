@@ -1,7 +1,10 @@
 @import './grid';
 
+
 .about-section {
     min-height: 100svh;
+   
+    
 
     @include device('s') {
         display: flex;
@@ -21,7 +24,7 @@
 
         @include device('s') {
             height: 50svh;
-            
+
         }
 
 
@@ -102,8 +105,4 @@
 
     }
 
-}
-
-.teste {
-    height: 100svh;
 }
