@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/global.css">
-    <script src="https://unpkg.com/wavesurfer.js@7">
-
-    </script>
-    <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
-
     <title>Tiago Figueiredo</title>
 </head>
 
@@ -27,11 +22,11 @@
 
 
 
-                <div class="audio-box">
-                    <div id='waveform'>
-                    </div>
-                    <div class="play-button" id="play-button"><img src="assets/icons/play.svg" alt=""></div>
-                </div>
+
+
+                <div class="play-button" id="play-button"><img src="assets/icons/play.svg" alt=""></div>
+
+
 
 
             </div>
@@ -91,47 +86,6 @@
     </main>
 
 </body>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const wavesurfer = WaveSurfer.create({
-
-            container: '#waveform',
-            waveColor: '#fff',
-            progressColor: '#EE772F',
-            cursorColor: 'transparent',
-            cursorWidth: 2,
-            minPxPerSec: 100,
-            url: 'assets/music1.mp3',
-
-            barWidth: 4,
-            // Optionally, specify the spacing between bars
-            barGap: 2,
-            // And the bar radius
-            barRadius: 1,
-        });
-
-        wavesurfer.load('assets/music1.mp3');
-
-
-        const playButton = document.getElementById('play-button');
-
-        let isPlaying = false;
-
-        playButton.addEventListener('click', function () {
-            if (isPlaying) {
-                wavesurfer.pause(); // Pausa o áudio
-            } else {
-                wavesurfer.play(); // Inicia o áudio
-            }
-            isPlaying = !isPlaying; // Alterna o estado
-        });
-
-        wavesurfer.once('interaction', () => {
-            wavesurfer.play()
-        })
-    });
-</script>
+<script src="scripts/audioController.js"></script>
 
 </html>
