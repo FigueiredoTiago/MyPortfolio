@@ -441,7 +441,7 @@ a {
 }
 /*animação de carousel*/
 .carousel {
-  overflow-x: clip;
+  overflow: hidden;
   -webkit-mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
           mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   display: flex;
@@ -451,13 +451,14 @@ a {
 }
 
 .carousel-content {
-  width: 100%;
+  width: -moz-max-content;
+  width: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 2rem;
   animation: scroller linear;
-  animation-timeline: scroll();
+  animation-timeline: scroll(root);
 }
 
 .carousel-content:nth-child(2) {
@@ -467,7 +468,7 @@ a {
 
 @keyframes scroller {
   to {
-    transform: translateX(-10%);
+    transform: translate(calc(-50% - 0.5rem));
   }
 }
 .grid-1 {
