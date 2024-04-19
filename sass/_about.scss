@@ -4,7 +4,9 @@
 .about-section {
     min-height: 100svh;
 
-
+    animation: fade-out 1s;
+    animation-timeline: view();
+    animation-range: exit;
 
     @include device('s') {
         display: flex;

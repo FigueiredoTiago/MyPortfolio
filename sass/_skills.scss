@@ -2,8 +2,8 @@
     min-height: 100svh;
 
     animation: fade-out 1s forwards;
-    animation-timeline: view(y);
-    animation-range-start: cover 105vh;
+    animation-timeline: view();
+    animation-range: exit;
 
     .skills-box {
         min-height: 100svh;
@@ -12,8 +12,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
-        gap: 10rem; 
+
+        gap: 10rem;
 
         h2 {
             font-size: 2.4rem;
