@@ -404,7 +404,7 @@ a {
 @keyframes fade-out {
   to {
     opacity: 0;
-    scale: 1.1;
+    scale: 0.8;
   }
 }
 /*percorrer bordar*/
@@ -976,7 +976,7 @@ header .header-content .social-medias-box a img:hover {
   min-height: 100svh;
   animation: fade-out 1s forwards;
   animation-timeline: view(y);
-  animation-range-start: cover 100vh;
+  animation-range-start: cover 105vh;
 }
 .skills-section .skills-box {
   min-height: 100svh;
@@ -1197,7 +1197,6 @@ header .header-content .social-medias-box a img:hover {
   min-height: 100svh;
 }
 .services-section .about-services {
-  width: 100%;
   height: -moz-max-content;
   height: max-content;
   display: grid;
@@ -1230,24 +1229,27 @@ header .header-content .social-medias-box a img:hover {
 }
 .services-section .card-content {
   padding: 5rem 0rem;
-  width: 100%;
   height: -moz-max-content;
   height: max-content;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  place-items: center;
+}
+@media screen and (min-width: 760px) and (max-width: 1200px) {
+  .services-section .card-content {
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 760px) {
   .services-section .card-content {
-    align-items: center;
-    flex-direction: column;
-    gap: 5rem;
+    grid-template-columns: 1fr;
   }
 }
 .services-section .card-content .service-card {
-  border: 1px solid #fff;
-  background-color: #3d3d3d;
-  width: 30rem;
+  border: 1px solid #f3f3f3;
+  width: 100%;
+  max-width: 30rem;
   height: 30rem;
   border-radius: 1rem;
   padding: 2rem;
