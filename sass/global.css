@@ -965,7 +965,7 @@ header .header-content .social-medias-box a img:hover {
   color: #fff;
   animation: fade-in linear forwards;
   animation-timeline: view();
-  animation-range: entry 30rem;
+  animation-range: entry 10%;
   -webkit-mask: linear-gradient(to right, transparent 0%, black 50%, black 90%, transparent 100%);
           mask: linear-gradient(to right, transparent 0%, black 50%, black 90%, transparent 100%);
 }
