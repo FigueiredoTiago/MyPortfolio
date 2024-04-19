@@ -980,7 +980,6 @@ header .header-content .social-medias-box a img:hover {
 }
 .skills-section .skills-box {
   min-height: 100svh;
-  overflow: hidden;
   -webkit-mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
           mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   display: flex;
@@ -1012,6 +1011,7 @@ header .header-content .social-medias-box a img:hover {
   }
 }
 .skills-section .skills-box .carousel {
+  width: 100%;
   overflow: hidden;
   -webkit-mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
           mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -1229,7 +1229,7 @@ header .header-content .social-medias-box a img:hover {
   }
 }
 .services-section .card-content {
-  padding-top: 5rem;
+  padding: 5rem 0rem;
   width: 100%;
   height: -moz-max-content;
   height: max-content;
