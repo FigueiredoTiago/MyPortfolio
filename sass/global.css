@@ -1376,7 +1376,7 @@ header .header-content .social-medias-box a img:hover {
   border: 1px solid #f3f3f3;
   width: 100%;
   max-width: 30rem;
-  height: 20rem;
+  height: 35rem;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
@@ -1400,8 +1400,32 @@ header .header-content .social-medias-box a img:hover {
   height: 2.4rem;
 }
 .services-section .card-content .service-card p {
-  font-size: 1.6rem;
   text-align: justify;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.services-section .card-content .service-card ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.services-section .card-content .service-card ul li {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.services-section .card-content .service-card ul li:nth-child(1) {
+  text-align: center;
+  justify-content: center;
+}
+.services-section .card-content .service-card ul li img {
+  width: 1.5rem;
 }
 .services-section .card-content .service-card:nth-child(1) {
   animation-delay: 1s;
