@@ -1,0 +1,66 @@
+@import './grid';
+main {
+    position: relative;
+
+    .navbar {
+        margin-inline: auto;
+        margin-block: 0;
+        border-radius: 3rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        width: max-content;
+
+        position: sticky;
+        top: 1rem;
+        z-index: 1000;
+
+        opacity: 0;
+        visibility: hidden;
+
+
+        animation: navbar-slide-up linear forwards;
+        
+        animation-timeline: view();
+        animation-range-start: 90vh;
+        animation-range-end: 105vh;
+
+        @include device('s') {
+            width: 80vw;
+            font-size: 1.4rem;
+        }
+        
+        
+
+
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+    }
+
+
+    @keyframes navbar-slide-up {
+        100% {
+            background-color: #fff;
+            opacity: 1;
+            visibility: visible;
+
+        }
+    }
+}
