@@ -1550,7 +1550,7 @@ main .navbar {
   margin-inline: auto;
   margin-block: 0;
   border-radius: 3rem;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 5rem;
