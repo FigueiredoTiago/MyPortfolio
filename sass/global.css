@@ -1620,4 +1620,50 @@ main .navbar ul li a {
     opacity: 1;
     visibility: visible;
   }
-}/*# sourceMappingURL=global.css.map */
+}
+
+.project-section {
+  min-height: 100svh;
+  padding: 2rem 0;
+}
+.project-section h1 {
+  font-size: 2.4rem;
+}
+.project-section h1::before {
+  content: "Recent Work";
+  display: block;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  margin-bottom: 0.1rem;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.2);
+  background-image: linear-gradient(to right, #ff105f, #ffad06, #00c49a);
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-repeat: repeat;
+}
+.project-section .projects {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.project-section .projects .project-card {
+  background-color: #fdfdfd;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.project-section .projects .project-card:hover {
+  transform: translateY(-10px);
+}
+.project-section .projects .project-card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@keyframes show-info-project {}/*# sourceMappingURL=global.css.map */
