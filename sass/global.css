@@ -1383,7 +1383,7 @@ header .header-content .social-medias-box a img:hover {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  transform: translateY(100%);
+  transform: translateY(50%);
   animation: slide-up ease-in-out forwards;
   animation-timeline: view();
   animation-range: entry 25%;
