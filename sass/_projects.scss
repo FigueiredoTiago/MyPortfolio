@@ -4,7 +4,7 @@
 
     h1 {
         font-size: 2.4rem;
-        
+
         &::before {
             content: 'Recent Work';
             display: block;
@@ -20,23 +20,35 @@
     }
 
     .projects {
-        padding: 1rem ;
+        padding: 1rem;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
         .project-card {
-            background-color: #fdfdfd;
+            height: 25rem;
+            display: grid;
+            place-items: center;
+            background-color: #ebcdbe;
             background-repeat: no-repeat;
-            border-radius: 5px;
-            padding: 1rem ;
+            border-radius: .1rem;
+            padding: 1rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 1rem;
             overflow: hidden;
             position: relative;
             transition: transform 0.3s ease-in-out;
 
-            &:hover {
-                transform: translateY(-10px);
+            opacity: 0;
+
+            transform: translateY(50px);
+
+            animation: slide-in ease-in-out forwards;
+            animation-timeline: view();
+            animation-range: entry 10%;
+
+            &:hover .info-container {
+                transform: translateY(-100%);
+
             }
 
             img {
@@ -44,13 +56,60 @@
                 object-fit: cover;
             }
 
+            .info-container {
+                height: 50%;
+                color: #fff;
+                text-transform: uppercase;
+                position: absolute;
+                bottom: -50%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                transition: transform 0.3s ease;
+
+                display: grid;
+                place-content: center;
+                text-align: center;
+
+
+                p {
+                    font-size: 1.6rem;
+                }
+
+                h2 {
+                    font-size: 1.8rem;
+                    margin-bottom: .5rem;
+                }
+            }
+
+
+            &:nth-child(2) {
+                background-color: #000;
+                animation-delay: 3s;
+                animation-duration: 3s;
+            }
+
+            &:nth-child(3) {
+                background-color: rgb(9, 20, 83);
+                animation-delay: 6s;
+                animation-duration: 3s;
+            }
+
         }
 
 
-        @keyframes show-info-project {
-            
-        }
 
+
+    }
+
+    @keyframes slide-in {
+        to {
+            opacity: 1;
+            /* torna o card visível */
+            transform: translateY(0);
+            /* desliza para cima */
+        }
 
     }
 }

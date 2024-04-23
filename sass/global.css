@@ -1648,22 +1648,69 @@ main .navbar ul li a {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 .project-section .projects .project-card {
-  background-color: #fdfdfd;
+  height: 25rem;
+  display: grid;
+  place-items: center;
+  background-color: #ebcdbe;
   background-repeat: no-repeat;
-  border-radius: 5px;
+  border-radius: 0.1rem;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 1rem;
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slide-in ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 10%;
 }
-.project-section .projects .project-card:hover {
-  transform: translateY(-10px);
+.project-section .projects .project-card:hover .info-container {
+  transform: translateY(-100%);
 }
 .project-section .projects .project-card img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@keyframes show-info-project {}/*# sourceMappingURL=global.css.map */
+.project-section .projects .project-card .info-container {
+  height: 50%;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.project-section .projects .project-card .info-container p {
+  font-size: 1.6rem;
+}
+.project-section .projects .project-card .info-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.project-section .projects .project-card:nth-child(2) {
+  background-color: #000;
+  animation-delay: 3s;
+  animation-duration: 3s;
+}
+.project-section .projects .project-card:nth-child(3) {
+  background-color: rgb(9, 20, 83);
+  animation-delay: 6s;
+  animation-duration: 3s;
+}
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    /* torna o card visível */
+    transform: translateY(0);
+    /* desliza para cima */
+  }
+}/*# sourceMappingURL=global.css.map */
