@@ -1387,6 +1387,7 @@ header .header-content .social-medias-box a img:hover {
   animation: slide-up ease-in-out forwards;
   animation-timeline: view();
   animation-range: entry 25%;
+  opacity: 0;
 }
 .services-section .card-content .service-card h2 {
   font-size: 2.4rem;
@@ -1427,14 +1428,17 @@ header .header-content .social-medias-box a img:hover {
 .services-section .card-content .service-card ul li img {
   width: 1.5rem;
 }
-.services-section .card-content .service-card:nth-child(1) {
-  animation-delay: 1s;
-}
 .services-section .card-content .service-card:nth-child(2) {
-  animation-delay: 10s;
+  animation-delay: 3s;
+  animation-duration: 3s;
+}
+.services-section .card-content .service-card:nth-child(3) {
+  animation-delay: 6s;
+  animation-duration: 5s;
 }
 @keyframes slide-up {
   to {
+    opacity: 1;
     transform: translateY(0);
   }
 }
