@@ -1626,6 +1626,10 @@ main .navbar ul li a {
   }
 }
 
+:root {
+  --card-bg-color: #333;
+}
+
 .project-section {
   min-height: 100svh;
   padding: 2rem 0;
@@ -1650,12 +1654,13 @@ main .navbar ul li a {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  color: #2b170a;
 }
 .project-section .projects .project-card {
   height: 25rem;
   display: grid;
   place-items: center;
-  background-color: #ebcdbe;
+  background-color: var(--card-bg-color);
   background-repeat: no-repeat;
   border-radius: 0.1rem;
   padding: 1rem;
@@ -1699,16 +1704,6 @@ main .navbar ul li a {
 .project-section .projects .project-card .info-container h2 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-}
-.project-section .projects .project-card:nth-child(2) {
-  background-color: #000;
-  animation-delay: 3s;
-  animation-duration: 3s;
-}
-.project-section .projects .project-card:nth-child(3) {
-  background-color: rgb(9, 20, 83);
-  animation-delay: 6s;
-  animation-duration: 3s;
 }
 @keyframes slide-in {
   to {

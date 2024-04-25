@@ -1,3 +1,8 @@
+:root {
+    --card-bg-color: #333;
+
+}
+
 .project-section {
     min-height: 100svh;
     padding: 2rem 0;
@@ -28,7 +33,7 @@
             height: 25rem;
             display: grid;
             place-items: center;
-            background-color: #ebcdbe;
+            background-color: var(--card-bg-color);
             background-repeat: no-repeat;
             border-radius: .1rem;
             padding: 1rem;
@@ -83,22 +88,9 @@
                 }
             }
 
-
-            &:nth-child(2) {
-                background-color: #000;
-                animation-delay: 3s;
-                animation-duration: 3s;
-            }
-
-            &:nth-child(3) {
-                background-color: rgb(9, 20, 83);
-                animation-delay: 6s;
-                animation-duration: 3s;
-            }
-
         }
 
-
+        color: #2b170a;
 
 
     }
