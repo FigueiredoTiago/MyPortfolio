@@ -138,29 +138,5 @@ header {
         }
       }
     }
-
-    .social-medias-box {
-      width: auto;
-      position: absolute;
-      top: 1rem;
-      right: 1.5rem;
-      display: flex;
-
-      gap: 1.5rem;
-
-      a {
-        img {
-          width: 2.5rem;
-          height: 2.5rem;
-          object-fit: cover;
-          transition: transform 0.3s;
-          cursor: pointer;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
   }
 }

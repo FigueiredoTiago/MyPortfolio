@@ -442,7 +442,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.8rem;
   height: 2rem;
 }
 
@@ -835,25 +835,6 @@ header .header-content .intro .dark-btn img {
   width: 1.2rem;
   height: 1.2rem;
   margin-left: 1rem;
-}
-header .header-content .social-medias-box {
-  width: auto;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  display: flex;
-  gap: 1.5rem;
-}
-header .header-content .social-medias-box a img {
-  width: 2.5rem;
-  height: 2.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-header .header-content .social-medias-box a img:hover {
-  transform: scale(1.1);
 }
 
 .grid-1 {
@@ -1588,54 +1569,55 @@ header .header-content .social-medias-box a img:hover {
   clear: both;
 }
 
-main {
+body {
   position: relative;
 }
-main .navbar {
-  margin-inline: auto;
-  margin-block: 0;
-  border-radius: 3rem;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  width: -moz-max-content;
-  width: max-content;
-  position: sticky;
-  top: 1rem;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  animation: navbar-slide-up linear forwards;
-  animation-timeline: view();
-  animation-range-start: 90vh;
-  animation-range-end: 105vh;
-}
-@media screen and (max-width: 760px) {
-  main .navbar {
-    width: 80vw;
-    font-size: 1.4rem;
-  }
-}
-main .navbar ul {
-  list-style-type: none;
+body .nav-side-bar {
+  z-index: 10000000;
+  position: fixed;
+  height: 100%;
+  width: 4rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
-main .navbar ul li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 1rem 2rem;
+body .nav-side-bar .home-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-@keyframes navbar-slide-up {
-  100% {
-    background-color: #fff;
-    opacity: 1;
-    visibility: visible;
-  }
+body .nav-side-bar .home-button a img {
+  width: 2.4rem;
+}
+body .nav-side-bar .home-button::after {
+  content: "";
+  width: 0.2rem;
+  height: 10rem;
+  background: #fff;
+}
+body .nav-side-bar span {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-weight: bolder;
+}
+body .nav-side-bar .social-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+body .nav-side-bar .social-nav a img {
+  width: 2.4rem;
+}
+body .nav-side-bar .social-nav::after {
+  content: "";
+  width: 0.2rem;
+  height: 10rem;
+  background: #fff;
 }
 
 :root {
@@ -1982,27 +1964,5 @@ main .navbar ul li a {
 }
 
 .contact-section {
-  height: 100svh;
-  padding: 2rem 0rem;
-  background-image: url("../assets/img/mountain.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.contact-section .contact-content h1 {
-  color: #fff;
-  font-size: 2.8rem;
-  font-weight: bolder;
-  margin-bottom: 2rem;
-}
-.contact-section .contact-content h1::before {
-  content: "Call me";
-  text-transform: uppercase;
-  font-size: 3rem;
-  color: rgba(13, 13, 13, 0.9098039216);
-  font-weight: bolder;
-  position: absolute;
-  bottom: -1rem;
-  left: 1%;
-  white-space: nowrap;
+  min-height: 100svh;
 }/*# sourceMappingURL=global.css.map */
