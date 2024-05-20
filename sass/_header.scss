@@ -1,180 +1,166 @@
-@import './animation';
-@import './grid';
+@import "./animation";
+@import "./grid";
 
 header {
+  position: relative;
+  overflow-x: clip;
+  height: 100svh;
+  mask: linear-gradient(
+    to top,
+    transparent 0%,
+    black 20%,
+    black 100%,
+    transparent 100%
+  );
+
+  .background-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.9;
+    animation: fade-out-image linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    scale: 1;
+    transform-origin: bottom;
+  }
+
+  .header-content {
     position: relative;
-    overflow-x: clip;
-    height: 100svh;
-    mask: linear-gradient(to top, transparent 0%, black 20%, black 100%, transparent 100%);
+    width: 100%;
+    height: 100%;
 
+    display: grid;
+    place-items: center;
 
+    .intro {
+      display: grid;
+      place-items: center;
+      gap: 10rem;
 
+      height: max-content;
+      width: max-content;
 
-    .background-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        opacity: 0.8;
-        animation: fade-out-image linear forwards;
-        animation-timeline: view();
-        animation-range: exit;
-        scale: 1;
-        transform-origin: bottom;
-    }
+      animation: fade-out linear;
+      animation-timeline: view();
+      animation-range: exit -300px;
 
+      @include device("s") {
+        gap: 5rem;
+      }
 
-    .header-content {
+      h1 {
+        color: #fff;
+        font-size: 4.8rem;
+        font-weight: bolder;
         position: relative;
         width: 100%;
-        height: 100%;
 
+        &::before {
+          content: "Just a Developer";
+          text-transform: uppercase;
+          font-size: 6rem;
+          color: #0d0d0de8;
+          font-weight: bolder;
+          position: absolute;
+          bottom: -7rem;
+          left: 50%;
+          transform: translateX(-50%);
+          white-space: nowrap;
 
-
-        display: grid;
-        place-items: center;
-
-        .intro {
-            display: grid;
-            place-items: center;
-            gap: 10rem;
-
-            height: max-content;
-            width: max-content;
-
-            animation: fade-out linear;
-            animation-timeline: view();
-            animation-range: exit -300px;
-
-            @include device('s') {
-                gap: 5rem;
-            }
-
-
-            h1 {
-                color: #fff;
-                font-size: 4.8rem;
-                font-weight: bolder;
-                position: relative;
-                width: 100%;
-                
-
-                &::before {
-                    content: "Just a Developer";
-                    text-transform: uppercase;
-                    font-size: 6rem;
-                    color: #0d0d0db7;
-                    font-weight: bolder;
-                    position: absolute;
-                    bottom: -7rem;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    white-space: nowrap;
-
-                    @include device('s') {
-                        font-size: 3rem;
-                        bottom: -2.5rem;
-                    }
-                    
-                }
-
-                @include device('s') {
-                    font-size: 3rem;
-                }
-
-
-            }
-
-            p {
-                height: 5rem;
-                width: auto;
-                padding: 0rem 1rem;
-                font-size: 2.8rem;
-                color: #fff;
-                font-weight: bolder;
-                background-image: linear-gradient(to bottom, #000, #000, transparent);
-
-
-
-
-                @include device('s') {
-                    font-size: 2rem;
-                }
-
-
-            }
-
-            .dark-btn {
-                padding: 1.2rem 2rem;
-                font-size: 1.8rem;
-                border: 1px solid #fff;
-                border-radius: .1rem;
-                color: #fff;
-                background-color: transparent;
-                cursor: pointer;
-
-                display: flex;
-                align-items: center;
-                gap: .5rem;
-
-                position: relative;
-
-                @include device('s') {
-                    font-size: 1.4rem;
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 0;
-                    height: 100%;
-                    background-color: #0D0D0D;
-                    z-index: -1;
-                    transition: width 0.3s ease;
-                }
-
-                &:hover::before {
-                    width: 100%;
-                }
-
-
-                img {
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    margin-left: 1rem;
-                }
-            }
+          @include device("s") {
+            font-size: 3rem;
+            bottom: -2.5rem;
+          }
         }
 
-        .social-medias-box {
-            width: auto;
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            display: flex;
-
-            gap: 1.5rem;
-
-
-            a {
-                img {
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    object-fit: cover;
-                    transition: transform 0.3s;
-                    cursor: pointer;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-
+        @include device("s") {
+          font-size: 3rem;
         }
+      }
+
+      p {
+        height: 5rem;
+        width: auto;
+        padding: 0rem 1rem;
+        font-size: 2.8rem;
+        color: #fff;
+        font-weight: bolder;
+        background-image: linear-gradient(to bottom, #000, #000, transparent);
+
+        @include device("s") {
+          font-size: 2rem;
+        }
+      }
+
+      .dark-btn {
+        padding: 1.2rem 2rem;
+        font-size: 1.8rem;
+        border: 1px solid #fff;
+        border-radius: 0.1rem;
+        color: #fff;
+        background-color: transparent;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        position: relative;
+
+        @include device("s") {
+          font-size: 1.4rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-color: #0d0d0d;
+          z-index: -1;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        img {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-left: 1rem;
+        }
+      }
     }
+
+    .social-medias-box {
+      width: auto;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      display: flex;
+
+      gap: 1.5rem;
+
+      a {
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          object-fit: cover;
+          transition: transform 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
 }

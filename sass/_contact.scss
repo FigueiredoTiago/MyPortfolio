@@ -1,0 +1,32 @@
+@import "./animation";
+@import "./grid";
+
+.contact-section {
+  height: 100svh;
+  padding: 2rem 0rem;
+  background-image: url("../assets/img/mountain.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .contact-content {
+    h1 {
+      color: #fff;
+      font-size: 2.8rem;
+      font-weight: bolder;
+      margin-bottom: 2rem;
+
+      &::before {
+        content: "Call me";
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: #0d0d0de8;
+        font-weight: bolder;
+        position: absolute;
+        bottom: -1rem;
+        left: 1%;
+        white-space: nowrap;
+      }
+    }
+  }
+}

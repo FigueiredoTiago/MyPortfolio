@@ -77,6 +77,12 @@
     scale: 1.1;
   }
 }
+@keyframes fade-in-image {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 /*percorrer bordar*/
 @keyframes percorrer {
   0% {
@@ -525,6 +531,12 @@ a {
     scale: 1.1;
   }
 }
+@keyframes fade-in-image {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 /*percorrer bordar*/
 @keyframes percorrer {
   0% {
@@ -712,7 +724,7 @@ header .background-img {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
-  opacity: 0.8;
+  opacity: 0.9;
   animation: fade-out-image linear forwards;
   animation-timeline: view();
   animation-range: exit;
@@ -754,7 +766,7 @@ header .header-content .intro h1::before {
   content: "Just a Developer";
   text-transform: uppercase;
   font-size: 6rem;
-  color: rgba(13, 13, 13, 0.7176470588);
+  color: rgba(13, 13, 13, 0.9098039216);
   font-weight: bolder;
   position: absolute;
   bottom: -7rem;
@@ -812,7 +824,7 @@ header .header-content .intro .dark-btn::before {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
   z-index: -1;
   transition: width 0.3s ease;
 }
@@ -1712,4 +1724,285 @@ main .navbar ul li a {
     transform: translateY(0);
     /* desliza para cima */
   }
+}
+
+/* animation read text */
+.scroll-reveal span {
+  color: hsla(0, 0%, 100%, 0.2);
+  background-image: linear-gradient(90deg, #fff, #fff);
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: scroll-reveal-animation linear forwards;
+  animation-timeline: view(y);
+}
+
+/* para controlar a velocidade use o Range Start e Range End */
+.scroll-reveal h2 span {
+  animation-range-start: cover 10vh;
+  animation-range-end: cover 25vh;
+}
+
+.scroll-reveal p span {
+  animation-range-start: cover 15vh;
+  animation-range-end: cover 60vh;
+}
+
+@keyframes scroll-reveal-animation {
+  to {
+    background-size: 100% 100%;
+  }
+  100% {
+    color: #fff;
+  }
+}
+/* reveal de itens na tela */
+.scroll-reveal-itens {
+  scale: 0.8;
+  opacity: 0.5;
+  animation: scroll-reveal-itens linear forwards;
+  animation-timeline: view(y);
+  animation-range-start: cover 5vh;
+  animation-range-end: cover 15vh;
+}
+
+@keyframes scroll-reveal-itens {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    color: #fff;
+    opacity: 1;
+  }
+}
+/* animations de entrada de elementos */
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    color: #fff;
+  }
+}
+/*animacoes de saida*/
+@keyframes fade-out-image {
+  25% {
+    opacity: 1;
+  }
+  85%, 100% {
+    opacity: 0;
+    scale: 1.5;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    scale: 1.1;
+  }
+}
+@keyframes fade-in-image {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+/*percorrer bordar*/
+@keyframes percorrer {
+  0% {
+    border-color: #fff;
+    /* Cor da borda inicial */
+    top: 0;
+    left: 0;
+  }
+  25% {
+    border-color: #fdfdfd;
+    /* Cor da borda aos 25% da animação */
+    top: 0;
+    left: calc(100% - 4px);
+  }
+  50% {
+    border-color: #190beb;
+    /* Cor da borda aos 50% da animação */
+    top: calc(100% - 4px);
+    left: calc(100% - 4px);
+  }
+  75% {
+    border-color: #2447e6;
+    /* Cor da borda aos 75% da animação */
+    top: calc(100% - 4px);
+    left: 0;
+  }
+  100% {
+    border-color: #f3f3f3;
+    /* Cor da borda ao final da animação */
+    top: 0;
+    left: 0;
+  }
+}
+/*animação de carousel*/
+@keyframes scroller {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.grid-1 {
+  width: calc(8.3333333333% - 20px);
+}
+
+.grid-2 {
+  width: calc(16.6666666667% - 20px);
+}
+
+.grid-3 {
+  width: calc(25% - 20px);
+}
+
+.grid-4 {
+  width: calc(33.3333333333% - 20px);
+}
+
+.grid-5 {
+  width: calc(41.6666666667% - 20px);
+}
+
+.grid-6 {
+  width: calc(50% - 20px);
+}
+
+.grid-7 {
+  width: calc(58.3333333333% - 20px);
+}
+
+.grid-8 {
+  width: calc(66.6666666667% - 20px);
+}
+
+.grid-9 {
+  width: calc(75% - 20px);
+}
+
+.grid-10 {
+  width: calc(83.3333333333% - 20px);
+}
+
+.grid-11 {
+  width: calc(91.6666666667% - 20px);
+}
+
+.grid-12 {
+  width: calc(100% - 20px);
+}
+
+[class*=grid-] {
+  float: left;
+  min-height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 760px) {
+  [class*=grid-] {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.offset-1 {
+  margin-left: calc(8.3333333333% + 10px);
+}
+
+.offset-2 {
+  margin-left: calc(16.6666666667% + 10px);
+}
+
+.offset-3 {
+  margin-left: calc(25% + 10px);
+}
+
+.offset-4 {
+  margin-left: calc(33.3333333333% + 10px);
+}
+
+.offset-5 {
+  margin-left: calc(41.6666666667% + 10px);
+}
+
+.offset-6 {
+  margin-left: calc(50% + 10px);
+}
+
+.offset-7 {
+  margin-left: calc(58.3333333333% + 10px);
+}
+
+.offset-8 {
+  margin-left: calc(66.6666666667% + 10px);
+}
+
+.offset-9 {
+  margin-left: calc(75% + 10px);
+}
+
+.offset-10 {
+  margin-left: calc(83.3333333333% + 10px);
+}
+
+.offset-11 {
+  margin-left: calc(91.6666666667% + 10px);
+}
+
+.offset-12 {
+  margin-left: calc(100% + 10px);
+}
+
+@media screen and (max-width: 760px) {
+  .offset-1, .offset-2, .offset-3, .offset-4, .offset-5, .offset-6, .offset-7, .offset-8, .offset-9, .offset-10, .offset-11, .offset-12 {
+    margin-left: 0;
+  }
+}
+.row {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media screen and (max-width: 760px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.row:after, .row:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-section {
+  height: 100svh;
+  padding: 2rem 0rem;
+  background-image: url("../assets/img/mountain.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact-section .contact-content h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+.contact-section .contact-content h1::before {
+  content: "Call me";
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: rgba(13, 13, 13, 0.9098039216);
+  font-weight: bolder;
+  position: absolute;
+  bottom: -1rem;
+  left: 1%;
+  white-space: nowrap;
 }/*# sourceMappingURL=global.css.map */
