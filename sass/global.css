@@ -1108,7 +1108,11 @@ header .header-content .intro .dark-btn img {
 .skills-section .skills-box h2:before {
   content: "Technical Skills";
   font-size: 6rem;
-  color: rgba(255, 255, 255, 0.0823529412);
+  background: linear-gradient(45deg, #6a0dad, #f24e1e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   font-weight: 700;
   position: absolute;
   bottom: -5rem;

@@ -1,102 +1,109 @@
 .skills-section {
+  min-height: 100svh;
+
+  animation: fade-out 1s forwards;
+  animation-timeline: view();
+  animation-range: exit;
+
+  .skills-box {
     min-height: 100svh;
+    mask: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    animation: fade-out 1s forwards;
-    animation-timeline: view();
-    animation-range: exit;
+    gap: 10rem;
 
-    .skills-box {
-        min-height: 100svh;
-        mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    h2 {
+      font-size: 2.4rem;
+      position: relative;
 
-        gap: 10rem;
+      &:before {
+        content: "Technical Skills";
+        font-size: 6rem;
+        background: linear-gradient(45deg,#6a0dad,#f24e1e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-weight: 700;
+        position: absolute;
+        bottom: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
 
-        h2 {
-            font-size: 2.4rem;
-            position: relative;
-
-            &:before {
-                content: "Technical Skills";
-                font-size: 6rem;
-                color: #ffffff15;
-                font-weight: 700;
-                position: absolute;
-                bottom: -5rem;
-                left: 50%;
-                transform: translateX(-50%);
-                white-space: nowrap;
-
-
-                @include device('s') {
-                    font-size: 3.5rem;
-                    bottom: -3rem;
-                    left: 2rem;
-                }
-            }
+        @include device("s") {
+          font-size: 3.5rem;
+          bottom: -3rem;
+          left: 2rem;
         }
-
-        .carousel {
-            width: 100%;
-            overflow: hidden;
-            mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 3rem;
-
-            .carousel-content {
-                width: max-content;
-                display: flex;
-                flex-direction: row;
-                white-space: nowrap;
-                gap: 2rem;
-                animation: scroller linear;
-                animation-timeline: scroll(root);
-                transform: translate(calc(100%));
-
-
-
-
-                .skill {
-                    display: grid;
-                    place-content: center;
-                    height: 10rem;
-                    width: 10rem;
-                    border-radius: 1rem;
-                    border: .1rem solid #ffffff15;
-                    background-color: #1f1f1f;
-
-                    img {
-                        width: 6.5rem;
-                        height: 6.4rem;
-                    }
-
-                    @include device('s') {
-                        height: 5rem;
-                        width: 5rem;
-
-                        img {
-                            width: 3.5rem;
-                            height: 3.5rem;
-                        }
-                    }
-                }
-            }
-
-            .carousel-content:nth-child(2) {
-                animation-direction: reverse;
-                flex-direction: row-reverse;
-                transform: translate(calc(50%));
-            }
-        }
-
-
-
-
-
+      }
     }
+
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      mask: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+
+      .carousel-content {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+        gap: 2rem;
+        animation: scroller linear;
+        animation-timeline: scroll(root);
+        transform: translate(calc(100%));
+
+        .skill {
+          display: grid;
+          place-content: center;
+          height: 10rem;
+          width: 10rem;
+          border-radius: 1rem;
+          border: 0.1rem solid #ffffff15;
+          background-color: #1f1f1f;
+
+          img {
+            width: 6.5rem;
+            height: 6.4rem;
+          }
+
+          @include device("s") {
+            height: 5rem;
+            width: 5rem;
+
+            img {
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+          }
+        }
+      }
+
+      .carousel-content:nth-child(2) {
+        animation-direction: reverse;
+        flex-direction: row-reverse;
+        transform: translate(calc(50%));
+      }
+    }
+  }
 }
