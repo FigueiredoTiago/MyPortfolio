@@ -432,8 +432,8 @@ html {
 body {
   position: relative;
   font-size: 1.6rem;
-  background-color: #00010D;
-  color: #fff;
+  background-color: #121212;
+  color: #E0E0E0;
   overflow-x: hidden;
 }
 
@@ -447,11 +447,11 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: #E0E0E0;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #0D0D0D;
+  background-color: #121212;
 }
 
 /* animation read text */
@@ -724,7 +724,6 @@ header .background-img {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
-  opacity: 0.9;
   animation: fade-out-image linear forwards;
   animation-timeline: view();
   animation-range: exit;
@@ -1931,4 +1930,148 @@ header .social-links a img {
 
 .contact-section {
   min-height: 100svh;
+}
+.contact-section .contact-left {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.contact-section .contact-left h1 {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  color: #ffffff !important;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 999;
+}
+.contact-section .contact-left h1::before {
+  background: linear-gradient(45deg, #6a0dad, #1c1f4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  content: "Get In Touch";
+  position: absolute;
+  font-size: 3.4rem;
+  color: rgba(255, 255, 255, 0.0823529412);
+  text-transform: uppercase;
+  width: 100%;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.contact-section .contact-left p {
+  width: 100%;
+  text-align: justify;
+  color: #ffffff;
+  font-weight: 500;
+}
+.contact-section .contact-left ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.contact-section .contact-left ul li {
+  list-style: none;
+}
+.contact-section .contact-left ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bolder;
+  transition: all 0.5s;
+}
+.contact-section .contact-left ul li a img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.contact-section .contact-left ul li a:hover {
+  color: #6a0dad;
+}
+.contact-section .contact-right {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .contact-right form {
+  padding: 3rem;
+  height: 50rem;
+  width: 45rem;
+  max-height: 60rem;
+  max-width: 55rem;
+  background-color: #1e1e1e;
+  border: 2px solid #6a0dad;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 5px rgba(106, 13, 173, 0.3137254902);
+}
+.contact-section .contact-right form input,
+.contact-section .contact-right form textarea {
+  outline: none;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.contact-section .contact-right form input {
+  width: 100%;
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+}
+.contact-section .contact-right form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  resize: none;
+  height: 10rem;
+}
+.contact-section .contact-right form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #6a0dad, #1c1f4a);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #e0e0e0;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 1s;
+  z-index: 999;
+}
+.contact-section .contact-right form button:hover {
+  background: linear-gradient(45deg, #1c1f4a, #6a0dad);
+  color: #ffffff;
+}
+.contact-section .contact-right form button img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.contact-section .contact-right form .terms {
+  margin-top: 4rem;
+}
+.contact-section .contact-right form .terms p {
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.contact-section .contact-right form .terms p a {
+  color: #6a0dad;
+  font-weight: bolder;
+  text-decoration: underline;
 }/*# sourceMappingURL=global.css.map */

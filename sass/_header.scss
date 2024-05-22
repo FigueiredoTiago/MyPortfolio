@@ -20,7 +20,6 @@ header {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.9;
     animation: fade-out-image linear forwards;
     animation-timeline: view();
     animation-range: exit;

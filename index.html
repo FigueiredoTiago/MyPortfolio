@@ -10,12 +10,10 @@
   <body>
     <header>
       <nav class="social-links">
-
         <a href="#"><img src="assets/icons/github.svg" alt="icone github" /></a>
         <a href="#"
           ><img src="assets/icons/linkedin.svg" alt="icone linkedin"
         /></a>
-
       </nav>
 
       <img
@@ -275,7 +273,100 @@
           </div>
         </section>
       </section>
-      
+
+      <section class="contact-section container">
+        <section class="contact-left grid-6">
+          <h1>Contact Me</h1>
+
+          <p>
+            If you are looking for a skilled developer to collaborate on
+            exciting projects or need assistance with web development, feel free
+            to reach out. I am always open to discussing new opportunities and
+            ideas.
+          </p>
+
+          <ul>
+            <li>
+              <a href="#">
+                <img src="assets/icons/mailPurple.svg" alt="icone email" />
+                tiagofdeveloper@outlook.com
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img
+                  src="assets/icons/whatsappPurple.svg"
+                  alt="icone whatsapp"
+                />
+                +55 (84) 98629-7649
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="assets/icons/githubPurple.svg" alt="icone Github" />
+                GitHub
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img
+                  src="assets/icons/linkedinPurple.svg"
+                  alt="icone Linkedin"
+                />
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="contact-right grid-6">
+          <form id="whatsapp-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required /><br /><br />
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea
+            ><br /><br />
+            <button type="submit">
+              Enviar pelo WhatsApp
+              <img src="assets/icons/whatsapp.svg" alt="whatsapp icon" />
+            </button>
+
+            <div class="terms">
+              <p
+                >This site is protected by reCAPTCHA and the Google
+                <a
+                  target="_blank"
+                  href="https://policies.google.com/privacy"
+                  class="svelte-yls5aq"
+                  >Privacy Policy</a
+                > and <a target="_blank" href="https://policies.google.com/terms" class="svelte-yls5aq">Terms of Service</a> apply.
+            </p>
+            </div>
+          </form>
+        </section>
+      </section>
     </main>
+
+    <script>
+      document
+        .getElementById("whatsapp-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value;
+          var message = document.getElementById("message").value;
+
+          var whatsappNumber = "5584986297649";
+          var text = `Nome: ${name}\nMensagem: ${message}`;
+          var encodedText = encodeURIComponent(text);
+
+          var whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedText}`;
+
+          window.open(whatsappUrl, "_blank");
+        });
+    </script>
   </body>
 </html>
