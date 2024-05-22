@@ -2085,4 +2085,13 @@ header .social-links a img {
   color: #6a0dad;
   font-weight: bolder;
   text-decoration: underline;
+}
+
+footer {
+  background: linear-gradient(45deg, #1e1e1e, #6a0dad);
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=global.css.map */
