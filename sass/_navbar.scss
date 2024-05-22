@@ -1,59 +1,22 @@
 @import "./grid";
-
-body {
-  position: relative;
-
-  .nav-side-bar {
-    z-index: 10000000;
-    position: fixed;
-    height: 100%;
-    width: 4rem;
+header {
+  .social-links {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-
-    .home-button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      a img {
+    gap: 1rem;
+    z-index: 99999;
+    a {
+      &:hover {
+        img {
+          scale: 1.1;
+        }
+      }
+      img {
         width: 2.4rem;
-      }
-
-      &::after {
-        content: "";
-        width: 0.2rem;
-        height: 10rem;
-        background: #fff;
-      }
-    }
-
-    span {
-      transform: rotate(-90deg);
-      white-space: nowrap;
-      font-weight: bolder;
-    }
-
-    .social-nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-
-      a img {
-        width: 2.4rem;
-      }
-
-      &::after {
-        content: "";
-        width: 0.2rem;
-        height: 10rem;
-        background: #fff;
+        height: 2.4rem;
+        transition: all 0.3s;
       }
     }
   }

@@ -1569,55 +1569,21 @@ header .header-content .intro .dark-btn img {
   clear: both;
 }
 
-body {
-  position: relative;
-}
-body .nav-side-bar {
-  z-index: 10000000;
-  position: fixed;
-  height: 100%;
-  width: 4rem;
+header .social-links {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
+  z-index: 99999;
 }
-body .nav-side-bar .home-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+header .social-links a:hover img {
+  scale: 1.1;
 }
-body .nav-side-bar .home-button a img {
+header .social-links a img {
   width: 2.4rem;
-}
-body .nav-side-bar .home-button::after {
-  content: "";
-  width: 0.2rem;
-  height: 10rem;
-  background: #fff;
-}
-body .nav-side-bar span {
-  transform: rotate(-90deg);
-  white-space: nowrap;
-  font-weight: bolder;
-}
-body .nav-side-bar .social-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-body .nav-side-bar .social-nav a img {
-  width: 2.4rem;
-}
-body .nav-side-bar .social-nav::after {
-  content: "";
-  width: 0.2rem;
-  height: 10rem;
-  background: #fff;
+  height: 2.4rem;
+  transition: all 0.3s;
 }
 
 :root {
