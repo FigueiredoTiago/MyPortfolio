@@ -1,149 +1,146 @@
-@import './grid';
+@import "./grid";
 
 .services-section {
-    min-height: 100svh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .about-services {
+    height: max-content;
+    display: grid;
+    place-items: center;
+    gap: 5rem;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      font-size: 2.4rem;
+
+      &::before {
+        content: "My services";
+        text-transform: uppercase;
+        font-size: 5rem;
+        background: linear-gradient(45deg, #0ACF83, #6a0dad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        width: 100%;
+        z-index: -1;
+
+        position: absolute;
+        bottom: -4rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include device("s") {
+          font-size: 4rem;
+          bottom: -3rem;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    padding: 5rem 0rem;
+    height: max-content;
     display: flex;
-    flex-direction: column;
-    align-items: center;    
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 5rem;
 
-    .about-services {
-        height: max-content;
-        display: grid;
-        place-items: center;
-        gap: 5rem;
-
-        h1 {
-            width: 100%;
-            text-align: center;
-            position: relative;
-            font-size: 2.4rem;
-
-            &::before {
-                content: "My services";
-                text-transform: uppercase;
-                font-size: 5rem;
-                color: #ffffff15;
-                width: 100%;
-
-                position: absolute;
-                bottom: -4rem;
-                left: 50%;
-                transform: translateX(-50%);
-
-                @include device('s') {
-                    font-size: 4rem;
-                    bottom: -3rem;
-                    left: 50%;
-                }
-
-            }
-
-        }
+    @include device("m") {
+      flex-direction: column;
+    }
+    @include device("s") {
+      flex-direction: column;
     }
 
-    .card-content {
-        padding: 5rem 0rem;
-        height: max-content;
+    .service-card {
+      border: 2px solid;
+      border-image: linear-gradient(45deg, #0ACF83, #6a0dad) 1;
+      width: 100%;
+      max-width: 30rem;
+      height: 35rem;
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      transform: translateY(50%);
+      animation: slide-up ease-in-out forwards;
+      animation-timeline: view();
+      animation-range: entry 25%;
+      opacity: 0;
+
+      h2 {
+        font-size: 2.4rem;
+        position: relative;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         align-items: center;
-        gap: 5rem;
+        gap: 1rem;
 
-        @include device('m') {
-            flex-direction: column;
+        img {
+          width: 2.4rem;
+          height: 2.4rem;
         }
-        @include device('s') {
-            flex-direction: column;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          &:nth-child(1) {
+            text-align: center;
+            justify-content: center;
+          }
+
+          img {
+            width: 1.5rem;
+          }
         }
-
-
-
-
-        .service-card {
-            border: 1px solid #f3f3f3;
-            width: 100%;
-            max-width: 30rem;
-            height: 35rem;
-            border-radius: 1rem;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            transform: translateY(50%);
-            animation: slide-up ease-in-out forwards;
-            animation-timeline: view();
-            animation-range: entry 25% ;
-            opacity: 0;
-    
-            h2 {
-                font-size: 2.4rem;
-                position: relative;
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-
-
-                img {
-                    width: 2.4rem;
-                    height: 2.4rem;
-                }
-            }
-
-            p {
-                text-align: justify;
-                font-size: 1.5rem;
-                font-style: italic;
-            }
-
-            ul {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: left;
-                gap: 1rem;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-
-                li {
-                    font-size: 1.6rem;
-                    display: flex;
-                    align-items: center;
-                    gap: .5rem;
-
-                    &:nth-child(1) {
-                        text-align: center;
-                        justify-content: center;
-                    }
-                    
-                    img {
-                        width: 1.5rem;
-                    }
-                }
-
-            }
-        }
-
-        .service-card:nth-child(2) {
-            animation-delay: 3s;
-            animation-duration: 3s;
-        }
-
-        .service-card:nth-child(3) {
-            animation-delay: 6s;
-            animation-duration: 5s;
-        }
-
-        
+      }
     }
 
-    @keyframes slide-up {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .service-card:nth-child(2) {
+      animation-delay: 3s;
+      animation-duration: 3s;
     }
+
+    .service-card:nth-child(3) {
+      animation-delay: 6s;
+      animation-duration: 5s;
+    }
+  }
+
+  @keyframes slide-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
