@@ -1,4 +1,4 @@
-@import './grid';
+@import "./grid";
 
 .skills-section {
   min-height: 100svh;
@@ -21,25 +21,27 @@
     align-items: center;
     justify-content: center;
     gap: 10rem;
-    
+
     h2 {
       font-size: 2.4rem;
       position: relative;
 
       &:before {
         content: "Technical Skills";
-        font-size: 6rem;
-        background: linear-gradient(45deg, #6a0dad, #f24e1e);
+        font-size: 5rem;
+        background: linear-gradient(45deg, #0acf83, #6a0dad);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
+        text-transform: uppercase;
         font-weight: 700;
         position: absolute;
-        bottom: -5rem;
+        bottom: -4rem;
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
+        z-index: -1;
 
         @include device("s") {
           font-size: 3.5rem;
@@ -74,7 +76,7 @@
         animation-timeline: scroll(root);
         transform: translate(100%);
 
-        @include device('s') {
+        @include device("s") {
           gap: 1rem;
           transform: translate(50%);
         }
@@ -84,9 +86,10 @@
           place-content: center;
           height: 10rem;
           width: 10rem;
-          border-radius: 1rem;
           border: 0.1rem solid #ffffff15;
           background-color: #1f1f1f;
+          border: 2px solid;
+          border-image: linear-gradient(45deg, #0acf83, #6a0dad) 1;
 
           img {
             width: 6.5rem;
@@ -110,8 +113,7 @@
         flex-direction: row-reverse;
         transform: translate(calc(50%));
 
-
-        @include device('s') {
+        @include device("s") {
           transform: translate(calc(100%));
         }
       }

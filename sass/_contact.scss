@@ -21,7 +21,7 @@
       font-weight: 700;
       z-index: 999;
       &::before {
-        background: linear-gradient(45deg, #6a0dad, #1c1f4a);
+        background-image: linear-gradient(45deg, #6a0dad, #8a2be2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
