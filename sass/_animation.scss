@@ -89,9 +89,8 @@
 }
 
 
-@keyframes fade-out {
+@keyframes fade-out-header {
     to {
-        //opacity: 0;
         scale: 1.1;
     }
 }
@@ -104,46 +103,20 @@
     
 }
 
-
-/*percorrer bordar*/
-
-@keyframes percorrer {
-    0% {
-        border-color: #fff;
-        /* Cor da borda inicial */
-        top: 0;
-        left: 0;
-    }
-
-    25% {
-        border-color: #fdfdfd;
-        /* Cor da borda aos 25% da animação */
-        top: 0;
-        left: calc(100% - 4px);
-    }
-
-    50% {
-        border-color: #190beb;
-        /* Cor da borda aos 50% da animação */
-        top: calc(100% - 4px);
-        left: calc(100% - 4px);
-    }
-
-    75% {
-        border-color: #2447e6;
-        /* Cor da borda aos 75% da animação */
-        top: calc(100% - 4px);
-        left: 0;
-    }
-
-    100% {
-        border-color: #f3f3f3;
-        /* Cor da borda ao final da animação */
-        top: 0;
-        left: 0;
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        scale: 1.1;
     }
 }
 
+@keyframes fade-in-image {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
 
 /*animação de carousel*/
 

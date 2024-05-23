@@ -43,7 +43,7 @@ header {
       height: max-content;
       width: max-content;
 
-      animation: fade-out linear;
+      animation: fade-out-header linear;
       animation-timeline: view();
       animation-range: exit -300px;
 
