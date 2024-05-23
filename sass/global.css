@@ -2405,8 +2405,25 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 footer p {
   font-size: 1.4rem;
   text-align: center;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer .social a {
+  transition: all 0.3s;
+}
+footer .social a:hover {
+  scale: 1.1;
+}
+footer .social a img {
+  width: 2rem;
+  height: 2rem;
 }/*# sourceMappingURL=global.css.map */

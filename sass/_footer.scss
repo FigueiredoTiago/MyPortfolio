@@ -5,9 +5,28 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   p {
     font-size: 1.4rem;
     text-align: center;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      transition: all 0.3s;
+      &:hover {
+        scale: 1.1;
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
 }
