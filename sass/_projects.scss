@@ -25,9 +25,11 @@
         bottom: -4rem;
         font-size: 5rem;
         text-transform: uppercase;
-        color: hsl(0 0% 100% / 0.2);
         background: linear-gradient(45deg, #0acf83, #6a0dad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         background-clip: text;
+        color: transparent;
         background-repeat: repeat;
         z-index: -1;
         white-space: nowrap;

@@ -38,7 +38,7 @@ header {
     .intro {
       display: grid;
       place-items: center;
-      gap: 10rem;
+      gap: 5rem;
 
       height: max-content;
       width: max-content;
@@ -62,10 +62,15 @@ header {
           content: "Just a Developer";
           text-transform: uppercase;
           font-size: 6rem;
-          color: #0d0d0de8;
+          background: linear-gradient(45deg, #0163fb, #0261f0, #0154d8);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
           font-weight: bolder;
           position: absolute;
-          bottom: -7rem;
+          bottom: -4rem;
+          z-index: -1;
           left: 50%;
           transform: translateX(-50%);
           white-space: nowrap;
@@ -81,28 +86,18 @@ header {
         }
       }
 
-      p {
-        height: 5rem;
-        width: auto;
-        padding: 0rem 1rem;
-        font-size: 2.8rem;
-        color: #fff;
-        font-weight: bolder;
-        background-image: linear-gradient(to bottom, #000, #000, transparent);
-
-        @include device("s") {
-          font-size: 2rem;
-        }
-      }
-
       .dark-btn {
         padding: 1.2rem 2rem;
         font-size: 1.8rem;
-        border: 1px solid #fff;
-        border-radius: 0.1rem;
+        border: 2px solid #0261f0;
+        border-radius: 3rem;
         color: #fff;
         background-color: transparent;
         cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 500;
+        overflow: hidden;
+        box-shadow: 0 0 10px 5px #0261f01f;
 
         display: flex;
         align-items: center;
@@ -121,9 +116,10 @@ header {
           left: 0;
           width: 0;
           height: 100%;
-          background-color: #0d0d0d;
+          background-color: #0c4db4;
           z-index: -1;
           transition: width 0.3s ease;
+          border-radius: 3rem;
         }
 
         &:hover::before {
