@@ -1262,9 +1262,10 @@ header .header-content .intro .dark-btn img {
 }
 @media screen and (max-width: 760px) {
   .skills-section .skills-box h2:before {
-    font-size: 3.5rem;
-    bottom: -3rem;
+    font-size: 3rem;
+    bottom: -2rem;
     left: 2rem;
+    transform: translateX(-45%);
   }
 }
 .skills-section .skills-box .carousel {
@@ -1917,6 +1918,7 @@ header .social-links a img {
           background-clip: text;
   background-repeat: repeat;
   z-index: -1;
+  white-space: nowrap;
 }
 @media screen and (max-width: 760px) {
   .project-section .about-project h1::before {

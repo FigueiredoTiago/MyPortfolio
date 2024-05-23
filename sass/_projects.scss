@@ -30,6 +30,7 @@
         background-clip: text;
         background-repeat: repeat;
         z-index: -1;
+        white-space: nowrap;
 
         @include device("s") {
           font-size: 3rem;

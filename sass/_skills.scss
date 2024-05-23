@@ -44,9 +44,10 @@
         z-index: -1;
 
         @include device("s") {
-          font-size: 3.5rem;
-          bottom: -3rem;
+          font-size: 3rem;
+          bottom: -2rem;
           left: 2rem;
+          transform: translateX(-45%);
         }
       }
     }
