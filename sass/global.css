@@ -2258,6 +2258,18 @@ header .social-links a img {
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  transform: translateY(50%);
+  animation: slide-up ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 25%;
+  opacity: 0;
+}
+@media screen and (max-width: 760px) {
+  .contact-section .contact-left {
+    padding-top: 3rem;
+    height: -moz-max-content;
+    height: max-content;
+  }
 }
 .contact-section .contact-left h1 {
   text-align: center;
@@ -2322,6 +2334,12 @@ header .social-links a img {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 760px) {
+  .contact-section .contact-right {
+    min-height: -moz-max-content;
+    min-height: max-content;
+  }
+}
 .contact-section .contact-right form {
   padding: 3rem;
   height: 50rem;
@@ -2334,6 +2352,13 @@ header .social-links a img {
      border-image: linear-gradient(45deg, #0acf83, #6a0dad) 1;
   border-radius: 1rem;
   box-shadow: 0 0 10px 5px rgba(10, 207, 131, 0.1215686275);
+  transform: translateY(50%);
+  animation: slide-up ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 25%;
+  opacity: 0;
+  animation-delay: 4s;
+  animation-duration: 4s;
 }
 .contact-section .contact-right form input,
 .contact-section .contact-right form textarea {
@@ -2364,20 +2389,17 @@ header .social-links a img {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(45deg, #0acf83, #6a0dad);
+  background-image: linear-gradient(45deg, #0acf83, #6a0dad);
   border: none;
   border-radius: 1rem;
   padding: 1rem 2rem;
   font-family: "Montserrat", sans-serif;
   color: #e0e0e0;
   margin: 0 auto;
-  cursor: pointer;
-  transition: all 1s;
-  z-index: 999;
+  transition: all 0.5s ease !important;
 }
 .contact-section .contact-right form button:hover {
-  background: linear-gradient(45deg, #6a0dad, #0acf83);
-  color: #ffffff;
+  background-image: linear-gradient(45deg, #6a0dad, #0acf83);
 }
 .contact-section .contact-right form button img {
   width: 2.4rem;
@@ -2396,6 +2418,12 @@ header .social-links a img {
   color: #0acf83;
   font-weight: bolder;
   text-decoration: underline;
+}
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 footer {
