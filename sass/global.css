@@ -1459,6 +1459,11 @@ header .header-content .intro .dark-btn img {
     left: 50%;
   }
 }
+.services-section .about-services p {
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 80%;
+}
 .services-section .card-content {
   padding: 5rem 0rem;
   height: -moz-max-content;
@@ -1486,7 +1491,9 @@ header .header-content .intro .dark-btn img {
   box-shadow: 0 0 10px 5px rgba(10, 207, 131, 0.1215686275);
   width: 100%;
   max-width: 30rem;
-  height: 35rem;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  height: 37rem;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;

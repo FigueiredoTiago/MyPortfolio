@@ -43,6 +43,12 @@
         }
       }
     }
+
+    p {
+      font-size: 1.6rem;
+      text-align: center;
+      max-width: 80%;
+    }
   }
 
   .card-content {
@@ -67,7 +73,8 @@
       box-shadow: 0 0 10px 5px #0acf831f;
       width: 100%;
       max-width: 30rem;
-      height: 35rem;
+      min-height: max-content;
+      height: 37rem;
       border-radius: 1rem;
       padding: 2rem;
       display: flex;
