@@ -31,7 +31,7 @@ Tudo isso utilizando **keyframes, transform, translate, opacity animation-timeli
 
 ## 🖼️ Capturas de Tela  
 
-![Portfolio Preview]([https://via.placeholder.com/800x400](https://imgur.com/t3AOufH))  
+![Portfolio Preview]([https://i.imgur.com/t3AOufH.png))  
 
 ---
 
