@@ -1917,7 +1917,7 @@ header .social-links a img {
   animation-range: entry 10%;
 }
 .project-section .projects .project-card:hover .info-container {
-  transform: translateY(-100%);
+  opacity: 1;
 }
 .project-section .projects .project-card img {
   width: 100%;
@@ -1925,24 +1925,27 @@ header .social-links a img {
      object-fit: cover;
 }
 .project-section .projects .project-card .info-container {
-  height: 50%;
+  height: -moz-max-content;
+  height: max-content;
   color: #fff;
   text-transform: uppercase;
   position: absolute;
-  bottom: -50%;
+  bottom: -3%;
   left: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
   display: grid;
   place-content: center;
-  text-align: center;
 }
 .project-section .projects .project-card .info-container p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  text-align: justify;
 }
 .project-section .projects .project-card .info-container h2 {
+  text-align: center;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
